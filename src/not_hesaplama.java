@@ -26,7 +26,9 @@ public class not_hesaplama {
 
         int toplam =kimya + fizik + mat + turkce + muzik + tarih;
         float ortalama = toplam/6;
-        System.out.print("Ortalamanız: ");
-        System.out.print(ortalama);
+        System.out.println("Ortalamanız: "+ortalama);
+
+        String kosul = ortalama >= 50 ? "Geçti":"Kaldı";
+        System.out.println(kosul);
     }
 }
