@@ -5,6 +5,15 @@ public class taksimetre_hesaplama {
         Minimum ödenecek tutar 20 TL'dir. 20 TL altında ki ücretlerde yine 20 TL alınacaktır.
         Taksimetre açılış ücreti 10 TL'dir.*/
 
+        // Totale başlangıçta her türlü 10 tl ödendiği için 10 tl yazıp sonra diğer değerler toplana bilir.
+
+        /* double total = 10;
+           total += (km* perKM);
+
+           gibi bir kodlama yapılabilir
+         */
+
+
         int km,tmAcilis=10;
         double kmCarpani =2.20,sonuc;
 
