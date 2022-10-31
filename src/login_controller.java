@@ -2,8 +2,8 @@ import java.util.Scanner;
 public class login_controller {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
-        String userName,pass;
-        int passChange;
+        String userName,pass,newPass,passChange;
+
 
 
         System.out.print("Kullanıcı Adınızı Girin: ");
@@ -19,38 +19,31 @@ public class login_controller {
         }
         else if (userName.equals("muh")&&!pass.equals("12345")) {
             System.out.println("hatalı şifre");
-            System.out.println("şifreyi değiştirmek ister misiniz 1/0 ? ");
-            passChange = inp.nextInt();
-
-            switch (passChange){
-                case 1:
-                    System.out.println("Yeni şifreyi girin");
-                    pass = inp.nextLine();
-
-                        if (pass.equals("12345")) {
-                            System.out.println("Lütfen yeni bir şifre giriniz! ");
-                            pass = inp.nextLine();
-                        }
-
-                        else{
-                            System.out.println("Şifre oluşturuldu!");
-                        }
-                        break;
-                        case 0:
-                    System.out.println("Giriş Yapılamadı.\nProgram Bitti!");
-                    break;
-                default:
-                    System.out.println("olmayan bir değer girdiniz");
-                    break;
+            System.out.print("şifreyi değiştirmek ister misiniz 1/0 ? ");
+            passChange = inp.nextLine();
+            if (!passChange.equals("1")){
+                System.out.println("Şifre değiştirme başarısız\nProgram Bitti!");
+            }
+            else{
+                System.out.print("Yeni şifreyi girin: ");
+                newPass = inp.nextLine();
+                if (newPass.equals("12345")){
+                    System.out.println("Yeni şifre giriniz!");
+                    newPass = inp.nextLine();
+                    }   if (newPass.equals("12345")){
+                    System.out.println("Şifre değiştirilemedi\nProgram Bitti!");
+                    }   else if(!newPass.equals("12345")){
+                    System.out.println("Şifre değiştirildi");
+                    }
+                else{
+                    System.out.println("Şifre değiştrime başarılı.");
+                    }
             }
 
         }
         else {
-            System.out.println("Hatalı şifre ve kullanıcı adı");
-
+            System.out.println("Giriş yapılamadı. Birden fazla hatalı bilgi\nProgram Bitti!");
         }
-
-
 
 
 
