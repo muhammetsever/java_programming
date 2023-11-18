@@ -1,2 +1,3 @@
 # java_programming
-all codes in the master branch
+all codes in src folder
+
